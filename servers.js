@@ -61,10 +61,10 @@ app.delete("/api/notes", function (req, res) {
     console.log(err);
   }
 });
-app.get("api/notes.html", function (req, res) {
+app.get("api/notes", function (req, res) {
   return res.sendFile(path.json(__dirname, "/db/db.json"));
 });
 //starting the server (listener)
-app.listen(PORT, function () {
-  console.log("Server started! At http://localhost:" + PORT);
+app.listen(port, function () {
+  console.log("Server started! At http://localhost:" + port);
 });
